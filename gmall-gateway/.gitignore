@@ -31,11 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-gmall-common/src/main/resources/
-gmall-common/src/test/
-gmall-generator/src/
-gmall-getway/src/
-gmall-pms/src/main/resources/static/
-gmall-pms/src/main/resources/templates/
-gmall-sms/src/main/resources/static/
-gmall-sms/src/main/resources/templates/
