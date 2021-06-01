@@ -4,7 +4,7 @@ spring:
     url: jdbc:mysql://47.97.105.35:3306/guli_admin?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: root
+    password: D!cwfg527
     druid:
       initial-size: 10
       max-active: 100
