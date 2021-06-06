@@ -45,9 +45,9 @@ public class AttrGroupController {
     @GetMapping("category/{cid}")
     public ResponseVo<List<AttrGroupEntity>> queryByCid(@PathVariable("cid") Long cid) {
 
-      List<AttrGroupEntity> categoryEntityList= this.attrGroupService.list(new QueryWrapper<AttrGroupEntity>().eq("category_id", cid));
+      List<AttrGroupEntity> attrGroupEntitiesList= this.attrGroupService.list(new QueryWrapper<AttrGroupEntity>().eq("category_id", cid));
 
-        return ResponseVo.ok(categoryEntityList);
+        return ResponseVo.ok(attrGroupEntitiesList);
 
     }
 

@@ -26,4 +26,14 @@ public class SpuServiceImpl extends ServiceImpl<SpuMapper, SpuEntity> implements
         return new PageResultVo(page);
     }
 
+    @Override
+    public PageResultVo querySpuInfo(PageParamVo pageParamVo, long categoryId) {
+
+        QueryWrapper wapper = new QueryWrapper();
+        if (categoryId != 0) {
+            wapper.eq("category_id", categoryId);
+        }
+        return new PageResultVo(this.page(pageParamVo.getPage(),wapper));
+    }
+
 }
