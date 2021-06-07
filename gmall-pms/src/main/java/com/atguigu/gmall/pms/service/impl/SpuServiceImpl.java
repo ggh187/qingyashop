@@ -1,5 +1,6 @@
 package com.atguigu.gmall.pms.service.impl;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -33,7 +34,16 @@ public class SpuServiceImpl extends ServiceImpl<SpuMapper, SpuEntity> implements
         if (categoryId != 0) {
             wapper.eq("category_id", categoryId);
         }
+        //查询条件里面的关键字,这里面的参数可能是用户输入的name或者id
+        String key = pageParamVo.getKey();
+
+        if (StringUtils.isNotBlank(key)) {
+            //wapper.and(t -> t.like("name", key).or().like("id", key));
+        }
+
+
         return new PageResultVo(this.page(pageParamVo.getPage(),wapper));
+
     }
 
 }
